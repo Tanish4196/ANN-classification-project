@@ -1,0 +1,25 @@
+[project]
+name = "ann-classification-project"
+version = "0.1.0"
+description = "Customer Churn Prediction using Artificial Neural Networks"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.32.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "tensorflow>=2.15.0",
+    "scikit-learn>=1.4.0",
+]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I", "N", "W", "B", "C4", "ARG", "PTH"]
+ignore = []
+
+[tool.ruff.isort]
+known-first-party = ["app"]
+
+[tool.pyright]
+include = ["app.py"]
+pythonVersion = "3.9"
+typeCheckingMode = "basic"
